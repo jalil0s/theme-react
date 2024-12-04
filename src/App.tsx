@@ -5,7 +5,7 @@ import { CartButton } from './components/CartButton';
 import Hero from './components/Hero';
 import { TrustBadges } from './components/TrustBadges';
 import { Reviews } from './components/Reviews';
-import FeaturedProducts from './components/FeaturedProducts';
+import { FeaturedProducts } from './components/FeaturedProducts';
 import { useCartStore } from './store/cartStore';
 
 function App() {
@@ -14,7 +14,6 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
-        {/* Header */}
         <header className="sticky top-0 bg-white shadow-sm z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
@@ -24,19 +23,10 @@ function App() {
           </div>
         </header>
 
-        {/* Hero Section */}
         <Hero />
-
-        {/* Trust Badges */}
         <TrustBadges />
-
-        {/* Featured Products */}
         <FeaturedProducts />
-
-        {/* Reviews Section */}
         <Reviews />
-
-        {/* Cart */}
         <Cart isOpen={isOpen} onClose={() => setIsOpen(false)} />
       </div>
     </Router>
